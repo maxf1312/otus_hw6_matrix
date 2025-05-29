@@ -7,7 +7,7 @@ using namespace std::literals::string_literals;
 
 int main(int, char **) 
 {
-	using namespace otus_hw5;
+	using namespace otus_hw6;
 	try
 
 	{

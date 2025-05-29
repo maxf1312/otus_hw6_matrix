@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace otus_hw5{
+namespace otus_hw6{
 
 
 
