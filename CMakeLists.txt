@@ -16,7 +16,7 @@ add_executable(matrix main.cpp)
 add_library(libmatrix vers.cpp)
 
 set_target_properties(matrix PROPERTIES
-    CXX_STANDARD 14
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
 
