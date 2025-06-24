@@ -42,7 +42,7 @@ if(WITH_BOOST_TEST)
     add_executable(test_version test_version.cpp)
 
     set_target_properties(test_version PROPERTIES
-        CXX_STANDARD 14
+        CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
     )
 
@@ -65,12 +65,12 @@ if(WITH_GTEST)
     target_compile_definitions(test_matrix PUBLIC -DUSE_DBG_TRACE)
 
     set_target_properties(test_versiong PROPERTIES
-        CXX_STANDARD 14
+        CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
     )
 
     set_target_properties(test_matrix PROPERTIES
-        CXX_STANDARD 14
+        CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
     )
 
