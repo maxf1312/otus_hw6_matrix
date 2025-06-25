@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>matrix: otus_hw6_matrix</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">matrix<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">matrix utility made for homework 6</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">otus_hw6_matrix</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<p>Homework 6 Реализуем бесконечную разреженную матрицу, используя паттерн Proxy(Заместитель). Спроектировать 2-мерную разреженную бесконечную матрицу, заполненную значениями по умолчанию. Матрица должна хранить только занятые элементы - значения которых хотя бы раз присваивались. Присвоение в ячейку значения по умолчанию освобождает ячейку.</p>
+<p>💡 Необходимо уметь отвечать на вопрос - сколько ячеек реально занято?</p>
+<p>💡 Необходимо уметь проходить по всем занятым ячейкам. Порядок не имеет значения. Возвращается позиция ячейки и ее значение.</p>
+<p>💡 При чтении элемента из свободной ячейки возвращать значение по умолчанию.</p>
+<p><b>Пример:</b> </p><div class="fragment"><div class="line"><span class="comment">// бесконечная матрица int заполнена значениями -1</span></div>
+<div class="line">Matrix&lt;int, -1&gt; matrix;</div>
+<div class="line">assert(matrix.size() == 0); <span class="comment">// все ячейки свободны</span></div>
+<div class="line"><span class="keyword">auto</span> a = matrix[0][0];</div>
+<div class="line">assert(a == -1);</div>
+<div class="line">assert(matrix.size() == 0);</div>
+<div class="line">matrix[100][100] = 314;</div>
+<div class="line">assert(matrix[100][100] == 314);</div>
+<div class="line">assert(matrix.size() == 1);</div>
+<div class="line"><span class="comment">// выведется одна строка</span></div>
+<div class="line"><span class="comment">// 100100314</span></div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keyword">auto</span> c: matrix)</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">int</span> x;</div>
+<div class="line"><span class="keywordtype">int</span> y;</div>
+<div class="line"><span class="keywordtype">int</span> v;</div>
+<div class="line">std::tie(x, y, v) = c;</div>
+<div class="line">std::cout &lt;&lt; x &lt;&lt; y &lt;&lt; v &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><ol type="1">
+<li>При запуске программы необходимо создать матрицу с пустым значением 0, заполнить главную диагональ матрицы (от [0,0] до [9,9]) значениями от 0 до 9.</li>
+<li>Второстепенную диагональ (от [0,9] до [9,0]) значениями от 9 до 0.</li>
+<li>Необходимо вывести фрагмент матрицы от [1,1] до [8,8]. Между столбцами пробел. Каждая строка матрицы на новой строке консоли.</li>
+<li>Вывести количество занятых ячеек.</li>
+<li>Вывести все занятые ячейки вместе со своими позициями.</li>
+<li>Опционально реализовать N-мерную матрицу.</li>
+<li>Опционально реализовать каноническую форму оператора <code>=</code>, допускающую выражения <code>((matrix[100][100] = 314) = 0) = 217</code></li>
+</ol>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Самоконтроль</h2>
+<ul>
+<li>индексация оператором <code>[]</code></li>
+<li>количество занятых ячеек должно быть 18 после выполнения примера выше</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Проверка</h2>
+<p>Задание считается выполненным успешно, если после анализа кода, установки пакета и запуска приложения появился фрагмент матрицы, количество ячеек и список всех значений с позициями. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

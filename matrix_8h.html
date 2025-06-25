@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>matrix: Файл matrix.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">matrix<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">matrix utility made for homework 6</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл matrix.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для matrix.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8h__incl.png" border="0" usemap="#amatrix_8h" alt=""/></div>
+<map name="amatrix_8h" id="amatrix_8h">
+<area shape="rect" title=" " alt="" coords="124,5,191,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,73,105"/>
+<area shape="poly" title=" " alt="" coords="139,34,73,73,71,68,136,29"/>
+<area shape="rect" title=" " alt="" coords="97,79,146,105"/>
+<area shape="poly" title=" " alt="" coords="154,32,137,66,132,64,149,30"/>
+<area shape="rect" title=" " alt="" coords="170,79,217,105"/>
+<area shape="poly" title=" " alt="" coords="166,30,183,64,178,66,161,32"/>
+<area shape="rect" title=" " alt="" coords="240,79,315,105"/>
+<area shape="poly" title=" " alt="" coords="179,29,246,68,243,73,177,34"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8h__dep__incl.png" border="0" usemap="#amatrix_8hdep" alt=""/></div>
+<map name="amatrix_8hdep" id="amatrix_8hdep">
+<area shape="rect" title=" " alt="" coords="66,5,132,31"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,79,79,105"/>
+<area shape="poly" title=" " alt="" coords="82,45,54,80,50,77,78,41"/>
+<area shape="rect" href="test__matrix_8cpp.html" title=" " alt="" coords="103,79,213,105"/>
+<area shape="poly" title=" " alt="" coords="121,41,150,77,146,80,117,45"/>
+</map>
+</div>
+</div>
+<p><a href="matrix_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw6_1_1Matrix.html">otus_hw6::Matrix&lt; T, def_value, DIM_COUNT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблон класса разреженной матрицы  <a href="classotus__hw6_1_1Matrix.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw6_1_1Matrix_1_1cell__info__t.html">otus_hw6::Matrix&lt; T, def_value, DIM_COUNT &gt;::cell_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">информация о ячейке TODO - сделать автогенерацию tuple&lt;size_t..., T&gt; для этого типа  <a href="structotus__hw6_1_1Matrix_1_1cell__info__t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw6_1_1Matrix_1_1iterator.html">otus_hw6::Matrix&lt; T, def_value, DIM_COUNT &gt;::iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">простой однонаправленный итератор для обхода ячеек  <a href="classotus__hw6_1_1Matrix_1_1iterator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw6_1_1Matrix_1_1DimProxy.html">otus_hw6::Matrix&lt; T, def_value, DIM_COUNT &gt;::DimProxy</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прокси для работы с ячейкой или измерением матрицы Хранит ссылку на матрицу, которая породила прокси, ОСТОРОЖНО - голая ссылка, не weak_ptr.  <a href="classotus__hw6_1_1Matrix_1_1DimProxy.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw6.html">otus_hw6</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a9b5c78e4a5d21cd9ba26bfd623631d58" id="r_a9b5c78e4a5d21cd9ba26bfd623631d58"><td class="memTemplParams" colspan="2">template&lt;typename T, T def_value, size_t DIM_COUNT&gt; </td></tr>
+<tr class="memitem:a9b5c78e4a5d21cd9ba26bfd623631d58"><td class="memTemplItemLeft" align="right" valign="top">const T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceotus__hw6.html#a9b5c78e4a5d21cd9ba26bfd623631d58">otus_hw6::Matrix&lt; T, def_value, DIM_COUNT &gt;::empty_value</a> = def_value</td></tr>
+<tr class="separator:a9b5c78e4a5d21cd9ba26bfd623631d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301f1fe47c105b802baa4715c2c3f4fd" id="r_a301f1fe47c105b802baa4715c2c3f4fd"><td class="memTemplParams" colspan="2">template&lt;typename T, T def_value, size_t DIM_COUNT&gt; </td></tr>
+<tr class="memitem:a301f1fe47c105b802baa4715c2c3f4fd"><td class="memTemplItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceotus__hw6.html#a301f1fe47c105b802baa4715c2c3f4fd">otus_hw6::Matrix&lt; T, def_value, DIM_COUNT &gt;::dimension_count</a> = DIM_COUNT</td></tr>
+<tr class="separator:a301f1fe47c105b802baa4715c2c3f4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c14b35a400efeccfb068ac1b60eb070" id="r_a6c14b35a400efeccfb068ac1b60eb070"><td class="memTemplParams" colspan="2">template&lt;typename T, T def_value, size_t DIM_COUNT&gt; </td></tr>
+<tr class="memitem:a6c14b35a400efeccfb068ac1b60eb070"><td class="memTemplItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceotus__hw6.html#a6c14b35a400efeccfb068ac1b60eb070">otus_hw6::Matrix&lt; T, def_value, DIM_COUNT &gt;::null_index</a> = static_cast&lt;size_t&gt;(-1)</td></tr>
+<tr class="separator:a6c14b35a400efeccfb068ac1b60eb070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
